@@ -1,0 +1,40 @@
+##################
+# All rules specific to this repo
+##################
+
+inherit_from: .rubocop_general.yml
+
+AllCops:
+  Include:
+    - '**/*.gemspec'
+    - '**/*.podspec'
+    - '**/*.rb'
+    - '**/*Appfile'
+    - '**/*Dangerfile'
+    - '**/*Fastfile'
+    - '**/*Gemfile'
+    - '**/*Pluginfile'
+    - '**/*Podfile*'
+    - '**/*Rakefile'
+    - '**/libexec/**/pkg-graph'
+    - '**/libexec/**/pr-groups'
+    - '**/libexec/**/ssl-doctor'
+  Exclude:
+    - '**/Podfile.lock'
+    - '**/pods/**/*'
+    - '**/vendor/Carthage/**/*'
+    - '**/vendor/Pods/**/*'
+    - '**/vendor/Rome/**/*'
+    - 'rpm.spec'
+
+Style/Documentation:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
